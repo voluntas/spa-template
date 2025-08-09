@@ -1,27 +1,53 @@
 {
-  "name": "nodejs-template",
+  "name": "static-page-template",
   "version": "0.0.0",
   "license": "Apache-2.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "test:vitest": "vitest run",
-    "test:playwright": "playwright test",
-    "build": "vite build",
-    "lint": "biome lint src/ tests/",
-    "fmt": "pnpm biome format --write src/ tests/",
-    "check": "tsc --noEmit"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@playwright/test": "1.52.0",
-    "tslib": "2.8.1",
-    "typescript": "5.8.3",
-    "vite": "6.3.5",
-    "vitest": "3.1.4"
+    "build": "vite build && cp dist/index.html dist/404.html",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check src/",
+    "fmt": "biome format --write src/",
+    "fmt:check": "biome format src/",
+    "e2e-test": "playwright test",
+    "e2e-test:ui": "playwright test --ui",
+    "e2e-test:headed": "playwright test --headed",
+    "ct-test": "playwright test -c playwright-ct.config.ts",
+    "ct-test:ui": "playwright test -c playwright-ct.config.ts --ui",
+    "ct-test:headed": "playwright test -c playwright-ct.config.ts --headed",
+    "test": "vitest run",
+    "test:coverage": "vitest --coverage"
   },
   "engines": {
-    "node": ">=22",
+    "node": ">=24",
     "pnpm": ">=10"
+  },
+  "dependencies": {
+    "@duckdb/duckdb-wasm": "1.29.1-dev269.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "uplot": "1.6.32",
+    "wouter": "3.7.1",
+    "zustand": "5.0.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.1.4",
+    "@playwright/experimental-ct-react": "1.54.2",
+    "@playwright/test": "1.54.2",
+    "@tailwindcss/vite": "4.1.11",
+    "@types/emscripten": "1.40.1",
+    "@types/node": "24.2.1",
+    "@types/react": "19.1.9",
+    "@types/react-dom": "19.1.7",
+    "@vitejs/plugin-react": "5.0.0",
+    "fast-check": "4.2.0",
+    "playwright": "1.54.2",
+    "tailwindcss": "4.1.11",
+    "typescript": "5.9.2",
+    "vite": "7.1.1",
+    "vitest": "3.2.4"
   }
 }

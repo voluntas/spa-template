@@ -1,14 +1,10 @@
-node_modules
-npm-debug.log
-.log/
+node_modules/
 dist/
-
-# .env
 .env*
-!.env.template
+!.env.example
+.DS_Store
+e2e-tests/screenshots/
 
-# playwright
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+test-results/
+playwright-report/
+playwright/.cache/

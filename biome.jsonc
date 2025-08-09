@@ -1,18 +1,43 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "organizeImports": {
-    "enabled": true
+  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "files": {
+    "includes": ["src/**/*.ts", "src/**/*.tsx"]
   },
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noArrayIndexKey": "off"
+      },
+      "style": {
+        "useNamingConvention": "off",
+        "noParameterAssign": "error",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "noUnusedTemplateLiteral": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error",
+        "noUselessElse": "error"
+      },
+      "complexity": {
+        "useSimplifiedLogicExpression": "off",
+        "noUselessLoneBlockStatements": "off"
+      },
+      "a11y": {
+        "useMediaCaption": "off",
+        "useValidAnchor": "off"
+      }
     }
   },
   "formatter": {
     "enabled": true,
-    "formatWithErrors": false,
-    "ignore": [],
+    "formatWithErrors": true,
+    "includes": ["**"],
     "indentStyle": "space",
     "indentWidth": 2,
     "lineWidth": 100

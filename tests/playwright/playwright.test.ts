@@ -1,5 +1,7 @@
 import { expect, test } from '@playwright/test'
 
-test('scan parquet', async ({ page }) => {
-  await page.goto('http://localhost:5173/index.html')
+test('displays Hello World on the page', async ({ page }) => {
+  await page.goto('http://localhost:5174/')
+  
+  await expect(page.getByText('Hello World')).toBeVisible()
 })
