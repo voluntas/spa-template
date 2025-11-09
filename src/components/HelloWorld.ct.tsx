@@ -3,6 +3,6 @@ import HelloWorld from './HelloWorld'
 
 test('renders Hello World text', async ({ mount }) => {
   const component = await mount(<HelloWorld />)
-  
+
   await expect(component).toContainText('Hello World')
 })
