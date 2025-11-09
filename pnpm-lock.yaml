@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@duckdb/duckdb-wasm':
-        specifier: 1.30.0
-        version: 1.30.0
+        specifier: 1.31.0
+        version: 1.31.0
       react:
         specifier: 19.2.0
         version: 19.2.0
@@ -211,8 +211,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@duckdb/duckdb-wasm@1.30.0':
-    resolution: {integrity: sha512-9aWrm+4ayl4sTlvGtl/b+LxrUyXaac3yyVqkoJ3F7Vkd62PoS8PcQIRJ/KjXBW36LP1CnPY5jjvFyIcTFLtcXA==}
+  '@duckdb/duckdb-wasm@1.31.0':
+    resolution: {integrity: sha512-HcR5XFmNpi7ua0IFohO2dFDNh0LkZgnkfkiD5BDlP8SAmhhcHe+zfOPD1izpmuBxLel25LHO608NY/3RolwztQ==}
 
   '@esbuild/aix-ppc64@0.25.12':
     resolution: {integrity: sha512-Hhmwd6CInZ3dwpuGTF8fJG6yoWmsToE+vYgD4nytZVxcu1ulHpUQRAB1UJ8+N1Am3Mz4+xOByoQoSZf4D+CpkA==}
@@ -1392,7 +1392,7 @@ snapshots:
   '@biomejs/cli-win32-x64@2.3.4':
     optional: true
 
-  '@duckdb/duckdb-wasm@1.30.0':
+  '@duckdb/duckdb-wasm@1.31.0':
     dependencies:
       apache-arrow: 17.0.0
 
