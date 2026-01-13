@@ -1,20 +1,22 @@
-import tailwindcss from '@tailwindcss/vite'
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import path from "path";
+import preact from "@preact/preset-vite";
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  base: process.env.BASE_URL || '/',
-  server: {
-    port: 5173,
-    host: true,
-  },
-  optimizeDeps: {
-    include: ['@duckdb/duckdb-wasm', 'uplot'],
-  },
+  plugins: [preact(), tailwindcss()],
   build: {
+    minify: true,
+    target: "esnext",
     rollupOptions: {
-      external: [],
+      input: {
+        index: path.resolve(__dirname, "./index.html"),
+      },
     },
   },
-})
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+});

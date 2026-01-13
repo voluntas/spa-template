@@ -1,12 +1,12 @@
-import { Route, Switch } from 'wouter'
-import HomePage from './pages/HomePage'
+import { LocationProvider, Route, Router } from "preact-iso";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <Switch>
-      <Route path="/" component={HomePage} />
-    </Switch>
-  )
+    <LocationProvider>
+      <Router>{[<Route key="home" path="/" component={HomePage} />]}</Router>
+    </LocationProvider>
+  );
 }
 
-export default App
+export default App;

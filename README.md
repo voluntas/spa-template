@@ -1,6 +1,5 @@
-# Static Page Template
+# Single Page Application Template
 
-![Static Badge](https://img.shields.io/badge/Checked_with-Biome-60a5fa?style=flat&logo=biome)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## 概要
@@ -15,36 +14,39 @@
     "pnpm": ">=10"
   },
   "dependencies": {
-    "@duckdb/duckdb-wasm": "1.31.0",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "uplot": "1.6.32",
-    "wouter": "3.7.1",
-    "zustand": "5.0.8"
+    "@duckdb/duckdb-wasm": "1.33.1-dev18.0",
+    "@preact/signals": "2.5.1",
+    "preact": "10.28.2",
+    "preact-iso": "2.11.1",
+    "uplot": "1.6.32"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.3.4",
-    "@playwright/experimental-ct-react": "1.56.1",
-    "@playwright/test": "1.56.1",
-    "@tailwindcss/vite": "4.1.17",
+    "@fast-check/vitest": "0.2.4",
+    "@playwright/test": "1.57.0",
+    "@preact/preset-vite": "2.10.2",
+    "@tailwindcss/vite": "4.1.18",
     "@types/emscripten": "1.41.5",
-    "@types/node": "24.10.0",
-    "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.2",
-    "@vitejs/plugin-react": "5.1.0",
-    "fast-check": "4.3.0",
-    "playwright": "1.56.1",
-    "tailwindcss": "4.1.17",
+    "@types/node": "25.0.7",
+    "@vitest/browser": "4.0.17",
+    "@vitest/browser-playwright": "4.0.17",
+    "@vitest/browser-preview": "4.0.17",
+    "fast-check": "4.5.3",
+    "jsdom": "27.4.0",
+    "oxfmt": "0.24.0",
+    "oxlint": "1.39.0",
+    "oxlint-tsgolint": "0.11.0",
+    "tailwindcss": "4.1.18",
     "typescript": "5.9.3",
-    "vite": "7.2.2",
-    "vitest": "4.0.8"
+    "vite": "7.3.1",
+    "vitest": "4.0.17",
+    "vitest-browser-preact": "1.0.0"
   }
 ```
 
 ## ライセンス
 
 ```text
-Copyright 2024-2025, @voluntas
+Copyright 2024-2026, @voluntas
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -1,8 +1,9 @@
-import { expect, test } from '@playwright/experimental-ct-react'
-import HelloWorld from './HelloWorld'
+import { expect, test } from "vitest";
+import { render } from "vitest-browser-preact";
+import HelloWorld from "./HelloWorld";
 
-test('renders Hello World text', async ({ mount }) => {
-  const component = await mount(<HelloWorld />)
+test("renders Hello World text", async () => {
+  const screen = render(<HelloWorld />);
 
-  await expect(component).toContainText('Hello World')
-})
+  await expect.element(screen.getByText("Hello World")).toBeVisible();
+});
